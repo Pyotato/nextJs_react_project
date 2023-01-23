@@ -54,5 +54,5 @@
   * ⚠️에러 원인 : html 태그 중 `<h1></h1>`태그 안에 `<h2><h2/>`태그를 넣음
     * Invalid HTML may cause hydration mismatch such as div inside p.
     * nextjs 공식문서 중 가능한 에러 발생 원인 3에 해당하는 겨우
-  * 🥰해결 : <h1></h1>를 <div></div>태그로 바꿔줌
+  * 🥰해결 : `<h1></h1>`를 `<div></div>`태그로 바꿔줌
   * [참고](https://nextjs.org/docs/messages/react-hydration-error)
