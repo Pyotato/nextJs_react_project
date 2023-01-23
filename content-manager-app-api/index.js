@@ -32,6 +32,15 @@ app.get("/", (req, res) => {
   res.send("Hello World");
 });
 
+app.get("/api/activeresource", (req, res) => {
+  const resources = getResources();
+  const activeResources = resources.find(
+    (resource) => resource.status === "active"
+  );
+  res.send(activeResources);
+  // res.send("Hello Resources");
+});
+
 app.get("/api/resources", (req, res) => {
   const resources = getResources();
   res.send(resources);
@@ -80,6 +89,39 @@ app.post("/api/resources", (req, res) => {
 
   // res.send("Data has been received");
   // res.send("Hello Resources");
+});
+
+app.patch("/api/resources/:id", (req, res) => {
+  const resources = getResources();
+  //:id에서 id자리에 쓴거랑 동일해야함
+  // const resourceID = req.params.id;
+  const { id } = req.params;
+  const index = resources.findIndex((resource) => resource.id === id);
+
+  const activeResource = resources.find(
+    (resource) => resource.status === "active"
+  );
+
+  resources[index] = req.body;
+
+  //active resource related functionality : resource activate하고 싶을 떄만 작동
+  if (req.body.status === "active") {
+    if (activeResource) {
+      return res.status(422).send("There is an active resource already!");
+    }
+    //resource activate했을 경우
+    resources[index].status = "active";
+    //activate한 시간 정보도 주기
+    resources[index].activationTime = new Date();
+  }
+
+  fs.writeFile(pathToFile, JSON.stringify(resources, null, 2), (err) => {
+    //데이터가 저장되거나 에러 발생 시 작동하는 callback
+    if (err) {
+      return res.status(422).send("Cannot store data in file");
+    }
+    return res.send("Data has been updated!");
+  });
 });
 
 app.listen(PORT, () => {

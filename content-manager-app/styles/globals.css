@@ -14,3 +14,17 @@ a {
 .resource-form {
   margin-top: 100px;
 }
+
+.active-resource {
+  background-color: #5d31aa;
+  padding: 50px;
+  text-align: center;
+  color: white;
+}
+.active-resource .resource-name {
+  font-size: 30px;
+}
+.active-resource .elapsed-time {
+  font-size: 64px;
+  font-weight: bold;
+}

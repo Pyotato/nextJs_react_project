@@ -5,7 +5,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="container">
         <div className="navbar-brand">
-          <Link className="navbar-item" href="../">
+          <Link className="navbar-item" href="/">
             <h1>Content Manager</h1>
             {/* <img src="../images/bulma.png" alt="Logo" /> */}
           </Link>

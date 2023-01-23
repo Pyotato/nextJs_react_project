@@ -4,7 +4,7 @@ import Newsletter from "components/NewsLetter";
 import ResourceHighlight from "components/ResourceHighlight";
 import ResourceList from "components/ResourceList";
 import React from "react";
-import { useState, useEffect } from "react";
+// import { useState, useEffect } from "react";
 // import { resources } from "api/data";
 
 // default : static page임 (get serverside props나 get serverside 없이)
@@ -53,7 +53,14 @@ export async function getServerSideProps() {
   const data = await resData.json();
   //next는 serverside+clientside 둘 다
   //서버 쪽에서 실행 => cmd
-  console.log(data);
+  // console.log(data);
+
+  //getStaticProps 사용 시 getStaticPaths가 리턴해야할 자료 형식
+  console.log(
+    data.map((resource) => {
+      return { params: { id: resource.id } };
+    })
+  );
   // console.log("hi there, from the server hehe");
   return {
     props: {

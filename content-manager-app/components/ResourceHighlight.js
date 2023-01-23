@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const ResourceHighlight = ({ resources }) => {
   return (
     <section className="hero ">
@@ -12,6 +14,12 @@ const ResourceHighlight = ({ resources }) => {
                       <h2 className="subtitle is-4">{resource.createdAt}</h2>
                       <h1 className="title">{resource.title}</h1>
                       <p>{resource.description}</p>
+                      <Link
+                        className="button is-link"
+                        href={`/resources/${resource.id}`}
+                      >
+                        Details
+                      </Link>
                     </div>
                   </div>
                 </div>
