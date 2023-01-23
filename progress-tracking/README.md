@@ -16,4 +16,4 @@
 5. [DAY5]()
 6. [DAY6]()
 7. [DAY7]()
-8. [DAY8]()
+8. [DAY8 : getServerSideProps() vs getStaticProps() & getStaticPaths() vs getInitialProps() ](https://github.com/Pyotato/nextJs_react_project/blob/master/progress-tracking/day8.md)

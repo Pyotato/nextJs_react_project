@@ -43,14 +43,7 @@
   - SEO (server Engine Optimization)
   - deployment
     - how to deploy my app on serverless vercel
-  -
 
-# day2
+---
 
-- ssr ? csr?
-  - server-side 랜더링 vs client-side 랜더링
-    - client-side (리액트)=> html을 열어서 보면 root div가 비어있음
-      - 대신 자바스크립트 코드로 html 내용을 랜더링 해줌
-      - vue, angular, react 모두 (매우 빠르게 로딩됨)
-    - ssr : seo(search engine optimization)에 유리함
-- next.js와 react는 서로 잘 맞음 (react기반이므로)
+* [Progress check](https://github.com/Pyotato/nextJs_react_project/tree/master/progress-tracking)

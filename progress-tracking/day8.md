@@ -7,8 +7,8 @@
 ```js
 [next.js 새로 배우는 것들]
 📌 .getServerSideProps()
-📌 .getStaticProps()
-📌 컴포넌트명.getInitialProps() 와 .getStaticPaths()
+📌 .getStaticProps() 와 .getStaticPaths()
+📌 컴포넌트명.getInitialProps()
 📌 next.js에서 url param 추출 방법 (ft. [id].js)
 
 [React 복습]
