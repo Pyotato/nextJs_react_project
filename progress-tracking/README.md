@@ -17,3 +17,6 @@
 6. [DAY6]()
 7. [DAY7]()
 8. [DAY8 : getServerSideProps() vs getStaticProps() & getStaticPaths() vs getInitialProps() ](https://github.com/Pyotato/nextJs_react_project/blob/master/progress-tracking/day8.md)
+9. [DAY9 : UX improvements & dot.env](https://github.com/Pyotato/nextJs_react_project/blob/master/progress-tracking/day9.md)
+10. 
+
