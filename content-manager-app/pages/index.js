@@ -49,7 +49,7 @@ function Home({ resources }) {
 //data is always fresh!
 //변경이 잦거나 data 변화가 많은 페이지에
 export async function getServerSideProps() {
-  const resData = await fetch("http://localhost:3001/api/resources");
+  const resData = await fetch(`${process.env.API_URL}/resources`);
   const data = await resData.json();
   //next는 serverside+clientside 둘 다
   //서버 쪽에서 실행 => cmd

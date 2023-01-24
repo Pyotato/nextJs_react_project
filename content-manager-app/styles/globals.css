@@ -20,11 +20,26 @@ a {
   padding: 50px;
   text-align: center;
   color: white;
+  height: 300px;
 }
 .active-resource .resource-name {
   font-size: 30px;
+  height: 50px;
 }
 .active-resource .elapsed-time {
   font-size: 64px;
   font-weight: bold;
+}
+.active-resource .time-wrapper {
+  height: 100px;
+}
+
+.tag.resource-complete {
+  background-color: #bdeebd;
+}
+.tag.resource-active {
+  background-color: rgb(248, 182, 59);
+}
+.tag.resource-inactive {
+  background-color: #9abbe3;
 }

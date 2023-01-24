@@ -53,16 +53,52 @@ const ActiveResource = () => {
     return () => clearInterval(interval);
   }, [seconds]);
 
+  const completeResource = () => {
+    axios
+      .patch("/api/resources", { ...resource, status: "complete" })
+      .then((_) => {
+        location.reload();
+        // alert("Resource activated!");
+      })
+      .catch(() => {
+        alert("Cannot complete the resource!");
+      });
+  };
+
+  //UX 개선 -> resource가 있으면 resource id로
+  const hasResource = resource && resource.id;
+
   return (
     <>
       <div className="active-resource">
-        <h1 className="resource-name">{resource.title}</h1>
+        <h1 className="resource-name">
+          {hasResource ? resource.title : "No Active Resource"}
+        </h1>
         <div className="time-wrapper">
-          <h2 className="elapsed-time">{seconds}</h2>
+          {hasResource &&
+            (seconds > 0 ? (
+              <h2 className="elapsed-time">{seconds}</h2>
+            ) : (
+              //when time has expired
+              <h2 className="elapsed-time">
+                <button
+                  className="button is-success"
+                  onClick={completeResource}
+                >
+                  Click and Done!
+                </button>
+              </h2>
+            ))}
         </div>
-        <Link href="/" className="button">
-          Go to resource
-        </Link>
+        {hasResource ? (
+          <Link href={`/resources/${resource.id}`} className="button">
+            Go to resource
+          </Link>
+        ) : (
+          <Link href="/" className="button">
+            Go to resources
+          </Link>
+        )}
       </div>
     </>
   );

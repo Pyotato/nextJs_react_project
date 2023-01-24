@@ -4,21 +4,22 @@
     "description": "My super resource - updated!relocate to homepage!",
     "link": "My super resource - updated!relocate to homepage!",
     "priority": "1",
-    "timeToFinish": "6012",
+    "timeToFinish": 60,
     "createdAt": "2023-01-23T14:39:31.788Z",
-    "status": "active",
+    "status": "complete",
     "id": "1674484771788",
-    "activationTime": "2023-01-23T16:45:55.635Z"
+    "activationTime": "2023-01-24T11:40:03.678Z"
   },
   {
     "title": "reuseable components UPDATEDDD",
     "description": "reuseable components",
     "link": "reuseable components",
     "priority": "2",
-    "timeToFinish": "604",
+    "timeToFinish": "1",
     "createdAt": "2023-01-23T14:24:21.071Z",
-    "status": "inactive",
-    "id": "1674483861071"
+    "status": "complete",
+    "id": "1674483861071",
+    "activationTime": "2023-01-24T11:32:45.158Z"
   },
   {
     "title": "Fallback false REVALIDATED!!!!",
@@ -31,19 +32,20 @@
     "id": "my-new-id"
   },
   {
-    "title": "testing redirect @@",
+    "title": "testing redirect @@UPDATE",
     "description": "testing redirect",
     "link": "testing redirect",
     "priority": "1",
-    "timeToFinish": "600",
+    "timeToFinish": "1",
     "createdAt": "2023-01-22T11:57:55.887Z",
-    "status": "inactive",
-    "id": "new-resources"
+    "status": "complete",
+    "id": "new-resources",
+    "activationTime": "2023-01-24T11:41:58.821Z"
   },
   {
-    "title": "test2",
-    "description": "tset",
-    "link": "tset",
+    "title": "test2 UPDATE TEST",
+    "description": "test2 UPDATE TEST",
+    "link": "test2 UPDATE TEST",
     "priority": "2",
     "timeToFinish": "600",
     "createdAt": "2023-01-22T11:53:49.691Z",

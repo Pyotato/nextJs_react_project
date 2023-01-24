@@ -2,8 +2,9 @@ import axios from "axios";
 
 export default async function (req, res) {
   // req.method "GET" "POST"
+  let url = `${process.env.API_URL}/resources`;
   if (req.method === "GET") {
-    const dataRes = await fetch("http://localhost:3001/api/resources");
+    const dataRes = await fetch(url);
     const data = await dataRes.json();
     return res.send(data);
   }
@@ -12,11 +13,14 @@ export default async function (req, res) {
     //구조븐헤
     const { id, title, description, link, timeToFinish, priority } = req.body;
 
+    if ((req.method = "PATCH")) {
+      url += `/${id}`;
+    }
     //조건 (삼항) 연산자
-    let url =
-      req.method === "POST"
-        ? "http://localhost:3001/api/resources"
-        : `http://localhost:3001/api/resources/${id}`;
+    // let url =
+    //   req.method === "POST"
+    //     ? `${process.env.API_URL}/resources`
+    //     : `/${process.env.API_URL}resources/${id}`;
 
     if (!title || !description || !link || !timeToFinish || !priority) {
       return res.status(422).send("Data are missing");
