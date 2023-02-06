@@ -1,4 +1,4 @@
-const NewsLetter = () => {
+const Newsletter = () => {
   return (
     <section className="section">
       <div className="columns">
@@ -29,4 +29,4 @@ const NewsLetter = () => {
     </section>
   );
 };
-export default NewsLetter;
+export default Newsletter;
