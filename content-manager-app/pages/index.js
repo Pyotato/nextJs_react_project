@@ -1,6 +1,6 @@
 import Layout from "components/Layout";
 
-import NewsLetter from "components/NewsLetter";
+// import NewsLetter from "components/NewsLetter";
 import ResourceHighlight from "components/ResourceHighlight";
 import ResourceList from "components/ResourceList";
 import React from "react";
@@ -36,7 +36,7 @@ function Home({ resources }) {
     <>
       <Layout>
         <ResourceHighlight resources={resources.slice(0, 2)} />
-        <NewsLetter />
+        {/* <NewsLetter /> */}
         <ResourceList resources={resources.slice(2)} />
       </Layout>
     </>
