@@ -4,7 +4,7 @@ import axios from "axios";
 
 //router 접근, 내 app내에 있는 모든 route로
 import { useRouter } from "next/router";
-import ResourceForm from "@/components/ResourceForm";
+import ResourceForm from "components/ResourceForm";
 
 const ResourceCreate = () => {
   // const [form, setForm] = useState(DEFAULT_DATA);
